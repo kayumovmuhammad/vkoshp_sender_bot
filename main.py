@@ -10,11 +10,9 @@ timer = 0
 BOT_TOKEN = getenv("BOT_TOKEN")
 URL = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
-# WEBSITE_URL = "https://neerc.ifmo.ru/school/russia-team/"
-WEBSITE_URL = "https://kayumovmuhammad.github.io/"
+WEBSITE_URL = "https://neerc.ifmo.ru/school/russia-team/"
 ADMIN_ID = getenv("KAYUMOVMUHAMMAD_ID")
-USERS_ID = [ADMIN_ID, getenv("MAHDI_ID")]
-
+USERS_ID = [ADMIN_ID, getenv("MAHDI_ID"), getenv("AKAI_SUHROB_ID")]
 print(ADMIN_ID)
 
 def send_message(chat_id, message):
@@ -23,6 +21,7 @@ def send_message(chat_id, message):
         "text": message
     }
     response = requests.post(URL, data=data)
+    print(response.text, chat_id)
     return response
 
 oldHTML = requests.get(WEBSITE_URL).text
@@ -39,4 +38,4 @@ while True:
             send_message(chat_id, f"Что то изменилось на сайте: {WEBSITE_URL}")
         oldHTML = newHTML
 
-    sleep(10)
+    sleep(60*10)
