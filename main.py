@@ -39,7 +39,7 @@ for url in WEBSITE_URLS:
 logger("Start polling")
 
 while True:
-    if timer % 12 == 0:
+    if timer % 120 == 0:
         send_message(ADMIN_ID, "Все работает ✅")
     timer += 1
 
