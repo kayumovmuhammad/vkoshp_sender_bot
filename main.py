@@ -16,6 +16,7 @@ WEBSITE_URLS = [
     "https://neerc.ifmo.ru/school/archive/2025-2026/ru-olymp-team-internet-2025-standings.html",
     "https://neerc.ifmo.ru/school/information/index.html",
     "https://neerc.ifmo.ru/school/archive/2025-2026.html",
+    "https://neerc.ifmo.ru/school/russia-team/listTeamsFinal.jsp",
 ]
 ADMIN_ID = getenv("KAYUMOVMUHAMMAD_ID")
 USERS_ID = [ADMIN_ID, 1982459265, 1351195326, 775472748]
